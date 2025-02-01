@@ -97,7 +97,7 @@ public class BaseClass {
 		
 		driver.get(p.getProperty("appURL"));  //Reading url from Properties file 
 		driver.manage().window().maximize();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 	}
 	
 	@AfterClass(groups= {"Sanity","Regression", "Master"})
@@ -123,7 +123,6 @@ public class BaseClass {
 		String generatedstring = RandomStringUtils.randomAlphabetic(3);
 		String generatednumber= RandomStringUtils.randomNumeric(3);
 		return (generatedstring +"@"+generatednumber);
-		
 	}
 	
 	public String captureScreen(String tname) {

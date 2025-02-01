@@ -1,7 +1,9 @@
 package pageObject;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class AccountRegistrationPage extends BasePage{
@@ -36,6 +38,7 @@ public class AccountRegistrationPage extends BasePage{
     @FindBy(xpath="//h1[normalize-space()='Your Account Has Been Created!']")
     WebElement msgConfirmation;
     
+    
     public void setFirstName(String fname) {
     	txtFirstname.sendKeys(fname);
     }
@@ -54,6 +57,7 @@ public class AccountRegistrationPage extends BasePage{
     
     public void setSubscribe() {
     	chkdSubscribe.click();
+    
     }
     
     
@@ -68,9 +72,9 @@ public class AccountRegistrationPage extends BasePage{
     	//btnContinue.submit();
     	
     	//solution 3
-    	//Actions act=new Actions(driver);
-    	//act.moveToElement(btnContinue).click().perform;
-    	
+//    	Actions act=new Actions(driver);
+//    	act.moveToElement(btnContinue).click().perform();
+//    	
     	//solution 4
     	//JavascriptExecution js=(JavascriptExecutor)driver;
     	//js.executeScript("arguments[0].click();", btnContinue);
